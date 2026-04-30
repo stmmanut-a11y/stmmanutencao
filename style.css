@@ -1,6 +1,11 @@
 /* RESET */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
 }
@@ -13,6 +18,7 @@ header {
     justify-content: space-between;
     padding: 15px 40px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -29,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffc107; /* amarelo industrial */
+    color: #ffc107;
 }
 
 /* BANNER */
@@ -41,7 +47,7 @@ nav a:hover {
     width: 100%;
     height: 450px;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(65%);
 }
 
 /* TEXTO DO BANNER */
@@ -50,7 +56,7 @@ nav a:hover {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -59,7 +65,6 @@ nav a:hover {
 }
 
 .overlay h1 {
-    margin: 0;
     font-size: 38px;
 }
 
@@ -94,6 +99,11 @@ h2 {
     padding-left: 10px;
 }
 
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 /* CARDS */
 .cards {
     display: grid;
@@ -108,20 +118,31 @@ h2 {
     overflow: hidden;
     transition: 0.3s;
     border: 1px solid #ddd;
+    position: relative;
 }
 
-/* IMAGENS (AQUI É O PRINCIPAL) */
+/* IMAGENS */
 .card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    transition: 0.3s;
+    display: block;
 }
 
-/* TEXTO CARD */
+/* SE IMAGEM QUEBRAR */
+.card img::before {
+    content: "Imagem não encontrada";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    background: #ddd;
+    color: #555;
+}
+
+/* TEXTO */
 .card p, .card h3 {
     padding: 15px;
-    margin: 0;
 }
 
 /* HOVER */
@@ -130,11 +151,7 @@ h2 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.card:hover img {
-    transform: scale(1.05);
-}
-
-/* BOTÃO WHATS */
+/* BOTÃO */
 .btn-whats {
     display: inline-block;
     margin-top: 20px;
@@ -151,7 +168,7 @@ h2 {
     background: #e0a800;
 }
 
-/* BOTÃO FLUTUANTE */
+/* WHATS FIXO */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -172,4 +189,29 @@ footer {
     text-align: center;
     padding: 25px;
     margin-top: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 10px;
+        display: inline-block;
+    }
+
+    .overlay h1 {
+        font-size: 26px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
 }
