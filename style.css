@@ -1,3 +1,124 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f2f2f2;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #000;
+}
+
+/* LOGO */
+.logo {
+    width: 100px; /* ajuste aqui se quiser menor */
+    height: auto;
+}
+
+/* MENU */
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffc107;
+}
+
+/* BANNER */
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+/* TEXTO DO BANNER */
+.overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.overlay h1 {
+    font-size: 38px;
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* SEÇÕES */
+section {
+    background: #fff;
+    margin: 30px auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+/* DIVISOR */
+.divisor {
+    height: 5px;
+    background: linear-gradient(to right, #444, #ffc107, #444);
+    margin: 30px 0;
+}
+
+/* TÍTULOS */
+h2 {
+    margin-bottom: 20px;
+    color: #111;
+    border-left: 5px solid #ffc107;
+    padding-left: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== GALERIA (O QUE VOCÊ MANDOU) ===== */
+
 .subtitulo {
     margin-top: 40px;
     margin-bottom: 15px;
@@ -29,4 +150,41 @@
     padding: 10px;
     font-size: 14px;
     color: #444;
+}
+
+/* CONTATO */
+.btn-whats {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: #ffc107;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-whats:hover {
+    background: #e0a800;
+}
+
+/* BOTÃO FLUTUANTE */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* RODAPÉ */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 25px;
 }
