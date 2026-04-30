@@ -20,9 +20,9 @@ header {
     background: #000;
 }
 
-/* LOGO */
+/* LOGO (AGORA MAIOR) */
 .logo {
-    width: 100px; /* ajuste aqui se quiser menor */
+    width: 150px; /* aumentado */
     height: auto;
 }
 
@@ -98,6 +98,22 @@ h2 {
     padding-left: 10px;
 }
 
+/* SUBTÍTULO */
+.subtitulo {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* DESCRIÇÃO (NOVA LEGENDA ÚNICA) */
+.descricao {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 15px;
+    text-align: center;
+}
+
 /* CARDS */
 .cards {
     display: grid;
@@ -117,14 +133,7 @@ h2 {
     transform: translateY(-6px);
 }
 
-/* ===== GALERIA (O QUE VOCÊ MANDOU) ===== */
-
-.subtitulo {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 22px;
-    color: #333;
-}
+/* ===== GALERIA (SIMPLIFICADA) ===== */
 
 .galeria {
     display: grid;
@@ -132,24 +141,18 @@ h2 {
     gap: 20px;
 }
 
-.item {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.item img {
+/* IMAGENS DIRETAS (SEM .item) */
+.galeria img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.item p {
-    padding: 10px;
-    font-size: 14px;
-    color: #444;
+.galeria img:hover {
+    transform: scale(1.05);
 }
 
 /* CONTATO */
