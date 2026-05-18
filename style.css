@@ -168,6 +168,23 @@ h2 {
     transform: scale(1.05);
 }
 
+/* GALERIA DE DUTOS */
+.galeria-dutos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.galeria-dutos img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTATO */
+
+
 /* CONTATO */
 .btn-whats {
     display: inline-block;
