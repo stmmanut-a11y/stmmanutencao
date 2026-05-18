@@ -215,6 +215,49 @@ h2 {
     font-weight: bold;
 }
 
+/* ===================== SEGURANÇA DO TRABALHO ===================== */
+
+.secao-seguranca {
+    height: 100vh;
+    width: 100%;
+    background-image: url("sua-imagem.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao-seguranca::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+.secao-seguranca .conteudo {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.secao-seguranca .conteudo h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.secao-seguranca .conteudo p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
 /* RODAPÉ */
 footer {
     background: #000;
