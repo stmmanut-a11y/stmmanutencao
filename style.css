@@ -68,7 +68,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* SERVIÇOS */
+/* GRID SERVIÇOS */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
