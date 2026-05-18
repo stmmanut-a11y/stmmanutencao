@@ -178,8 +178,9 @@ h2 {
 .galeria-dutos img {
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
+    background: #000;
 }
 
 /* CONTATO */
