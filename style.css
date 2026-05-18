@@ -217,7 +217,7 @@ h2 {
 
 /* ===================== SEGURANÇA DO TRABALHO ===================== */
 
-.secao-seguranca {
+.secao-segurança do trabalho {
     height: 100vh;
     width: 100%;
     background-image: url("sua-imagem.jpg");
@@ -230,7 +230,7 @@ h2 {
     justify-content: center;
 }
 
-.secao-seguranca::before {
+.secao-segurança do trabalho::before {
     content: "";
     position: absolute;
     top: 0;
@@ -240,7 +240,7 @@ h2 {
     background: rgba(0,0,0,0.55);
 }
 
-.secao-seguranca .conteudo {
+.secao-segurança do trabalho .conteudo {
     position: relative;
     color: #fff;
     text-align: center;
@@ -248,12 +248,12 @@ h2 {
     padding: 20px;
 }
 
-.secao-seguranca .conteudo h1 {
+.secao-segurança do trabalho .conteudo h1 {
     font-size: 42px;
     margin-bottom: 20px;
 }
 
-.secao-seguranca .conteudo p {
+.secao-segurança do trabalho .conteudo p {
     font-size: 20px;
     line-height: 1.6;
 }
