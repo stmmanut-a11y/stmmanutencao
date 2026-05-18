@@ -1,39 +1,86 @@
-<section class="slider">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <div class="slide active" style="background-image: url('seguranca.jpeg');">
-        <div class="overlay"></div>
+.slider{
+    position:relative;
+    width:100%;
+    height:700px;
+    overflow:hidden;
+}
 
-        <div class="conteudo">
-            <h1>Segurança</h1>
-            <p>
-                Proteção completa para sua empresa com monitoramento moderno.
-            </p>
-        </div>
-    </div>
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    
+    background-size: contain; /* mostra imagem completa */
+    background-position:center;
+    background-repeat:no-repeat;
 
-    <div class="slide" style="background-image: url('tecnologia.jpeg');">
-        <div class="overlay"></div>
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-        <div class="conteudo">
-            <h1>Tecnologia</h1>
-            <p>
-                Soluções tecnológicas inovadoras para seu negócio.
-            </p>
-        </div>
-    </div>
+    opacity:0;
+    transition:0.6s;
+}
 
-    <div class="slide" style="background-image: url('automacao.jpeg');">
-        <div class="overlay"></div>
+.slide.active{
+    opacity:1;
+}
 
-        <div class="conteudo">
-            <h1>Automação</h1>
-            <p>
-                Automação inteligente para aumentar produtividade.
-            </p>
-        </div>
-    </div>
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+}
 
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+.conteudo{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    text-align:center;
+    max-width:800px;
+    padding:20px;
+}
 
-</section>
+.conteudo h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.conteudo p{
+    font-size:22px;
+    line-height:1.6;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    border:none;
+    color:#fff;
+    font-size:30px;
+    padding:12px 18px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+.prev:hover,
+.next:hover{
+    background:#000;
+}
