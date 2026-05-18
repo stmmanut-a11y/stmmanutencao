@@ -12,7 +12,7 @@ body {
     color: #222;
 }
 
-/* HERO PRINCIPAL */
+/* HERO */
 .hero {
     height: 100vh;
     background: url("banner.jpeg") center/cover no-repeat;
@@ -69,7 +69,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* GRID SERVIÇOS */
+/* SERVIÇOS */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -80,7 +80,6 @@ h2 {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* DIVISÓRIA */
@@ -91,7 +90,7 @@ h2 {
     background: linear-gradient(to right, transparent, #bbb, transparent);
 }
 
-/* SLIDER */
+/* SLIDER NORMAL */
 .slider {
     display: flex;
     gap: 15px;
@@ -105,11 +104,11 @@ h2 {
     flex-shrink: 0;
 }
 
-/* 🔥 SEÇÃO FULL SCREEN (DESTAQUE) */
+/* 🔥 FULL SCREEN (AGORA REALMENTE GRANDE) */
 .hero-projeto {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh; /* 🔥 TELA INTEIRA */
     overflow: hidden;
 }
 
@@ -117,6 +116,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1.08); /* zoom leve pra impacto */
 }
 
 .texto-projeto {
@@ -125,10 +125,11 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.35);
     color: #fff;
+    font-size: 2.5rem;
     text-align: center;
-    font-size: 2rem;
+    font-weight: bold;
     padding: 20px;
 }
 
@@ -177,11 +178,11 @@ footer {
 /* RESPONSIVO */
 @media (max-width: 768px) {
     .hero-projeto {
-        height: 60vh;
+        height: 70vh;
     }
 
     .texto-projeto {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .slider img {
