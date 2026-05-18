@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +11,10 @@ body {
     color: #222;
 }
 
-/* HERO */
+/* ================= HERO (BANNER CORRIGIDO) ================= */
 .hero {
     height: 100vh;
-    background: url("fundo.jpeg") center/cover no-repeat;
+    background: url("banner.jpeg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +32,7 @@ body {
 .hero-content {
     position: relative;
     max-width: 800px;
+    padding: 20px;
 }
 
 .logo {
@@ -39,7 +40,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* BOTÕES */
+/* ================= BOTÕES ================= */
 .btn {
     display: inline-block;
     padding: 12px 20px;
@@ -49,6 +50,11 @@ body {
     border-radius: 6px;
     text-decoration: none;
     margin: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e09e00;
 }
 
 .whatsapp {
@@ -56,7 +62,11 @@ body {
     color: #fff;
 }
 
-/* SEÇÕES */
+.whatsapp:hover {
+    background: #1ebe5b;
+}
+
+/* ================= SEÇÕES ================= */
 section {
     padding: 60px 20px;
     max-width: 1100px;
@@ -68,7 +78,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* GRID SERVIÇOS */
+/* ================= SERVIÇOS ================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -80,9 +90,14 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-/* DIVISÓRIA */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= DIVISÓRIA ================= */
 .divisoria {
     height: 2px;
     width: 80%;
@@ -90,44 +105,57 @@ h2 {
     background: linear-gradient(to right, transparent, #bbb, transparent);
 }
 
-/* SLIDER */
+/* ================= SLIDER ================= */
 .slider {
     display: flex;
     gap: 15px;
     overflow-x: auto;
     padding: 10px;
+    scroll-snap-type: x mandatory;
 }
 
 .slider img {
     height: 250px;
     border-radius: 10px;
     flex-shrink: 0;
+    scroll-snap-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* SEGURANÇA */
+/* ================= SEGURANÇA ================= */
+.seguranca {
+    text-align: center;
+}
+
 .seguranca img {
     width: 100%;
     max-width: 700px;
     border-radius: 10px;
     display: block;
     margin: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* CONTATO */
+/* ================= CONTATO ================= */
 .contato {
     text-align: center;
 }
 
 .contato p {
     margin: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
-/* RESPONSÁVEL */
+/* ================= RESPONSÁVEL TÉCNICO ================= */
 .responsavel {
     text-align: center;
     background: #fff;
     padding: 50px 20px;
     border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .responsavel-box {
@@ -136,12 +164,28 @@ h2 {
     background: #f5f5f5;
     padding: 20px 30px;
     border-radius: 10px;
+    border-left: 4px solid #ffb400;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 20px;
     background: #111;
     color: #fff;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .slider img {
+        height: 180px;
+    }
 }
