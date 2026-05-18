@@ -1,127 +1,194 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background:#f4f4f4;
-    color:#222;
+body {
+    background: #f5f5f5;
+    color: #222;
 }
 
-/* HERO */
-.hero{
-    height:100vh;
-    background:url('banner.jpeg') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    text-align:center;
-    color:#fff;
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("fundo.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.65);
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:800px;
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
 }
 
-.logo{
-    width:130px;
-    margin-bottom:10px;
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
 }
 
-h1{
-    font-size:42px;
-    margin-bottom:10px;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-.btn{
-    display:inline-block;
-    padding:12px 20px;
-    background:#ffb400;
-    color:#000;
-    margin-top:10px;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:6px;
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ddd;
 }
 
-/* SEÇÕES */
-section{
-    padding:60px 20px;
-    text-align:center;
+/* ================= BOTÕES ================= */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ffb400;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 5px;
 }
 
-/* SERVIÇOS */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    max-width:1100px;
-    margin:auto;
+.btn:hover {
+    background: #e09e00;
 }
 
-.card{
-    background:#fff;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+.whatsapp {
+    background: #25d366;
+    color: #fff;
 }
 
-.card p{
-    margin-top:10px;
-    font-size:14px;
-    color:#444;
+.whatsapp:hover {
+    background: #1ebe5b;
 }
 
-/* SLIDERS */
-.slider-section h2{
-    margin-bottom:15px;
+/* ================= SEÇÕES ================= */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.slider{
-    display:flex;
-    gap:10px;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    padding:10px;
+/* ================= SERVIÇOS ================= */
+.servicos h2,
+.slider-section h2,
+.contato h2,
+.responsavel h2,
+.seguranca h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
 }
 
-.slider img{
-    width:320px;
-    height:220px;
-    object-fit:cover;
-    border-radius:10px;
-    scroll-snap-align:center;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-/* SEGURANÇA */
-.seguranca img{
-    width:80%;
-    max-width:600px;
-    border-radius:10px;
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-/* CONTATO */
-.contato .btn.whatsapp{
-    background:green;
-    color:#fff;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-/* FOOTER */
-footer{
-    background:#111;
-    color:#fff;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+/* ================= DIVISÓRIA ================= */
+.divisoria {
+    height: 2px;
+    width: 80%;
+    margin: 40px auto;
+    background: linear-gradient(to right, transparent, #bbb, transparent);
+}
+
+/* ================= SLIDER ================= */
+.slider-section {
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.slider img {
+    height: 250px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ================= SEGURANÇA ================= */
+.seguranca {
+    text-align: center;
+}
+
+.seguranca img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ================= CONTATO ================= */
+.contato {
+    text-align: center;
+}
+
+.contato p {
+    margin: 8px 0;
+}
+
+/* ================= RESPONSÁVEL ================= */
+.responsavel {
+    text-align: center;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .slider img {
+        height: 180px;
+    }
 }
