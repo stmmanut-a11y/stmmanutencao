@@ -1,86 +1,123 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STM Manutenção e Montagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.slider{
-    position:relative;
-    width:100%;
-    height:700px;
-    overflow:hidden;
-}
+<body>
 
-.slide{
-    position:absolute;
-    width:100%;
-    height:100%;
-    
-    background-size: contain; /* mostra imagem completa */
-    background-position:center;
-    background-repeat:no-repeat;
+<!-- HERO -->
+<header class="hero">
+    <div class="overlay"></div>
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    <div class="hero-content">
+        <img src="logo.jpeg" class="logo">
+        <h1>STM Manutenção e Montagens</h1>
+        <p>Soluções industriais em caldeiraria, dutos e estruturas metálicas com qualidade e segurança</p>
 
-    opacity:0;
-    transition:0.6s;
-}
+        <a href="#contato" class="btn">Solicitar Orçamento</a>
+    </div>
+</header>
 
-.slide.active{
-    opacity:1;
-}
+<!-- SERVIÇOS -->
+<section class="servicos">
+    <h2>Nossos Serviços</h2>
 
-.overlay{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.55);
-}
+    <div class="grid">
 
-.conteudo{
-    position:relative;
-    z-index:2;
-    color:#fff;
-    text-align:center;
-    max-width:800px;
-    padding:20px;
-}
+        <div class="card">
+            <h3>Caldeiraria</h3>
+            <p>Fabricação, montagem e manutenção de estruturas metálicas industriais.</p>
+        </div>
 
-.conteudo h1{
-    font-size:48px;
-    margin-bottom:20px;
-}
+        <div class="card">
+            <h3>Fabricação de Dutos</h3>
+            <p>Produção e instalação de dutos para ventilação, exaustão e sistemas industriais.</p>
+        </div>
 
-.conteudo p{
-    font-size:22px;
-    line-height:1.6;
-}
+        <div class="card">
+            <h3>Estruturas Metálicas</h3>
+            <p>Desenvolvimento de estruturas sob medida para plataformas e suportes industriais.</p>
+        </div>
 
-.prev,
-.next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    background:rgba(0,0,0,0.5);
-    border:none;
-    color:#fff;
-    font-size:30px;
-    padding:12px 18px;
-    cursor:pointer;
-    z-index:10;
-}
+        <div class="card">
+            <h3>Manutenção Industrial</h3>
+            <p>Manutenção preventiva e corretiva em equipamentos e estruturas industriais.</p>
+        </div>
 
-.prev{
-    left:20px;
-}
+    </div>
+</section>
 
-.next{
-    right:20px;
-}
+<!-- CAVALETES -->
+<section class="slider-section">
+    <h2>Fabricação e Montagem de Cavalete Articulado</h2>
 
-.prev:hover,
-.next:hover{
-    background:#000;
-}
+    <div class="slider">
+        <img src="cavalete1.jpeg">
+        <img src="cavalete2.jpeg">
+        <img src="cavalete3.jpeg">
+        <img src="cavalete4.jpeg">
+        <img src="cavalete5.jpeg">
+        <img src="cavalete6.jpeg">
+    </div>
+</section>
+
+<!-- DUTOS -->
+<section class="slider-section">
+    <h2>Fabricação e Instalação de Dutos Industriais</h2>
+
+    <div class="slider">
+        <img src="fabricação de dutos1.jpeg">
+        <img src="fabricação de dutos2.jpeg">
+    </div>
+</section>
+
+<!-- ROLDANAS -->
+<section class="slider-section">
+    <h2>Componentes e Sistemas de Roldanas</h2>
+
+    <div class="slider">
+        <img src="roldana1.jpeg">
+        <img src="roldana2.jpeg">
+    </div>
+</section>
+
+<!-- SEGURANÇA -->
+<section class="seguranca">
+    <h2>Segurança do Trabalho</h2>
+    <img src="seguranca.jpeg">
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contato">
+
+    <h2>Contato</h2>
+
+    <a class="btn" href="mailto:stmmanut@gmail.com">Solicitar Orçamento</a>
+
+    <a class="btn whatsapp" href="https://wa.me/5513974115419" target="_blank">
+        Falar no WhatsApp
+    </a>
+
+    <p>Email: stmmanut@gmail.com</p>
+    <p>Instagram: stm_fabr.m</p>
+
+    <p>CNPJ: 31.635.319/0001-17</p>
+    <p>Rua: MARECHAL PEGO JUNIOR, 105 - SANTOS - SP</p>
+    <p>Telefone: (13) 97411-5419</p>
+
+    <p><strong>Responsável Técnico:</strong> Eng. Civil Ramon Douglas da Silva</p>
+    <p>CREA: 5017174271</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 STM Manutenção e Montagens</p>
+</footer>
+
+</body>
+</html>
