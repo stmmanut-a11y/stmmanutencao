@@ -32,7 +32,6 @@ body {
 
 .hero-content {
     position: relative;
-    max-width: 800px;
 }
 
 .logo {
@@ -69,7 +68,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* SERVIÇOS */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -90,7 +89,7 @@ h2 {
     background: linear-gradient(to right, transparent, #bbb, transparent);
 }
 
-/* SLIDER NORMAL */
+/* SLIDER */
 .slider {
     display: flex;
     gap: 15px;
@@ -101,24 +100,38 @@ h2 {
 .slider img {
     height: 250px;
     border-radius: 10px;
-    flex-shrink: 0;
 }
 
-/* 🔥 FULL SCREEN (AGORA REALMENTE GRANDE) */
+/* 🔥 FULL SCREEN SEM CORTAR (CORRETO AGORA) */
 .hero-projeto {
     position: relative;
     width: 100%;
-    height: 100vh; /* 🔥 TELA INTEIRA */
+    height: 100vh;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
+/* wrapper ajuda a centralizar */
+.img-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔥 AQUI ESTÁ A CORREÇÃO IMPORTANTE */
 .hero-projeto img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transform: scale(1.08); /* zoom leve pra impacto */
+    object-fit: contain; /* NÃO corta nada */
+    background: #111; /* preenche laterais */
 }
 
+/* TEXTO */
 .texto-projeto {
     position: absolute;
     inset: 0;
@@ -127,10 +140,8 @@ h2 {
     justify-content: center;
     background: rgba(0,0,0,0.35);
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
-    font-weight: bold;
-    padding: 20px;
 }
 
 /* SEGURANÇA */
@@ -183,9 +194,5 @@ footer {
 
     .texto-projeto {
         font-size: 1.4rem;
-    }
-
-    .slider img {
-        height: 180px;
     }
 }
