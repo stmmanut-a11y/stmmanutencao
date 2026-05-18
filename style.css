@@ -1,4 +1,3 @@
-
 /* RESET */
 * {
     margin: 0;
@@ -68,7 +67,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* GRID */
+/* SERVIÇOS */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -100,38 +99,28 @@ h2 {
 .slider img {
     height: 250px;
     border-radius: 10px;
+    flex-shrink: 0;
 }
 
-/* 🔥 FULL SCREEN SEM CORTAR (CORRETO AGORA) */
+/* PROJETOS FULL (SEM ZOOM / SEM CORTE) */
 .hero-projeto {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #111;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    padding: 40px 0;
 }
 
-/* wrapper ajuda a centralizar */
-.img-wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 🔥 AQUI ESTÁ A CORREÇÃO IMPORTANTE */
 .hero-projeto img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* NÃO corta nada */
-    background: #111; /* preenche laterais */
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    display: block;
 }
 
-/* TEXTO */
 .texto-projeto {
     position: absolute;
     inset: 0;
@@ -140,8 +129,9 @@ h2 {
     justify-content: center;
     background: rgba(0,0,0,0.35);
     color: #fff;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
+    padding: 20px;
 }
 
 /* SEGURANÇA */
@@ -188,11 +178,11 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-    .hero-projeto {
-        height: 70vh;
+    .slider img {
+        height: 180px;
     }
 
     .texto-projeto {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
