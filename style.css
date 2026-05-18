@@ -217,10 +217,10 @@ h2 {
 
 /* ===================== SEGURANÇA DO TRABALHO ===================== */
 
-.secao-segurança do trabalho {
+.secao-seguranca {
     height: 100vh;
     width: 100%;
-    background-image: url("sua-imagem.jpg");
+    background-image: url("seguranca.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -230,7 +230,8 @@ h2 {
     justify-content: center;
 }
 
-.secao-segurança do trabalho::before {
+/* CAMADA ESCURA */
+.secao-seguranca::before {
     content: "";
     position: absolute;
     top: 0;
@@ -238,22 +239,25 @@ h2 {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.55);
+    z-index: 1;
 }
 
-.secao-segurança do trabalho .conteudo {
+/* CONTEÚDO */
+.secao-seguranca .conteudo {
     position: relative;
+    z-index: 2;
     color: #fff;
     text-align: center;
     max-width: 800px;
     padding: 20px;
 }
 
-.secao-segurança do trabalho .conteudo h1 {
+.secao-seguranca .conteudo h1 {
     font-size: 42px;
     margin-bottom: 20px;
 }
 
-.secao-segurança do trabalho .conteudo p {
+.secao-seguranca .conteudo p {
     font-size: 20px;
     line-height: 1.6;
 }
