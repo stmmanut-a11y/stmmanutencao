@@ -1,4 +1,3 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* BODY */
 body {
     background: #f2f2f2;
 }
@@ -20,9 +18,9 @@ header {
     background: #000;
 }
 
-/* LOGO (AGORA MAIOR) */
+/* LOGO */
 .logo {
-    width: 150px; /* aumentado */
+    width: 150px;
     height: auto;
 }
 
@@ -50,14 +48,13 @@ nav a:hover {
     background: black;
 }
 
-
 .foto-banner {
     width: 100%;
     height: 100vh;
     object-fit: contain;
 }
 
-/* TEXTO DO BANNER */
+/* TEXTO BANNER */
 .overlay {
     position: absolute;
     bottom: 40px;
@@ -112,7 +109,7 @@ h2 {
     color: #333;
 }
 
-/* DESCRIÇÃO (NOVA LEGENDA ÚNICA) */
+/* DESCRIÇÃO */
 .descricao {
     margin-bottom: 25px;
     color: #555;
@@ -139,8 +136,7 @@ h2 {
     transform: translateY(-6px);
 }
 
-/* ===== GALERIA (SIMPLIFICADA) ===== */
-
+/* GALERIA */
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -168,7 +164,7 @@ h2 {
     transform: scale(1.05);
 }
 
-/* GALERIA DE DUTOS */
+/* GALERIA DUTOS */
 .galeria-dutos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -183,10 +179,7 @@ h2 {
     display: block;
 }
 
-/* CONTATO */
-
-
-/* CONTATO */
+/* BOTÃO WHATS */
 .btn-whats {
     display: inline-block;
     margin-top: 20px;
@@ -202,7 +195,7 @@ h2 {
     background: #e0a800;
 }
 
-/* BOTÃO FLUTUANTE */
+/* WHATSAPP FLUTUANTE */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -215,54 +208,19 @@ h2 {
     font-weight: bold;
 }
 
-/* ===================== SEGURANÇA DO TRABALHO ===================== */
+/* ===================== SEGURANÇA DO TRABALHO (SÓ IMAGEM) ===================== */
 
 .secao-seguranca {
     height: 100vh;
     width: 100%;
     background-image: url("seguranca.jpeg");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #000;
 }
 
-/* CAMADA ESCURA */
-.secao-seguranca::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    z-index: 1;
-}
-
-/* CONTEÚDO */
-.secao-seguranca .conteudo {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-align: center;
-    max-width: 800px;
-    padding: 20px;
-}
-
-.secao-seguranca .conteudo h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.secao-seguranca .conteudo p {
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-/* RODAPÉ */
+/* FOOTER */
 footer {
     background: #000;
     color: white;
