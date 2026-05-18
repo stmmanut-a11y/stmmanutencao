@@ -9,6 +9,7 @@
 body {
     background: #f5f5f5;
     color: #222;
+    line-height: 1.6;
 }
 
 /* ================= HERO ================= */
@@ -47,8 +48,8 @@ body {
 
 .hero p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
     color: #ddd;
+    margin-bottom: 20px;
 }
 
 /* ================= BOTÕES ================= */
@@ -77,24 +78,20 @@ body {
     background: #1ebe5b;
 }
 
-/* ================= SEÇÕES ================= */
+/* ================= SEÇÕES GERAIS ================= */
 section {
     padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
 }
 
-/* ================= SERVIÇOS ================= */
-.servicos h2,
-.slider-section h2,
-.contato h2,
-.responsavel h2,
-.seguranca h2 {
+h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
 }
 
+/* ================= SERVIÇOS ================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -135,7 +132,7 @@ section {
 }
 
 .slider img {
-    height: 250px;
+    height: 260px;
     border-radius: 10px;
     flex-shrink: 0;
     scroll-snap-align: center;
@@ -161,16 +158,25 @@ section {
 }
 
 .contato p {
-    margin: 8px 0;
+    margin: 6px 0;
 }
 
-/* ================= RESPONSÁVEL ================= */
+/* ================= RESPONSÁVEL TÉCNICO ================= */
 .responsavel {
     text-align: center;
     background: #fff;
-    padding: 40px 20px;
+    padding: 50px 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.responsavel-box {
+    margin-top: 20px;
+    display: inline-block;
+    background: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border-left: 4px solid #ffb400;
 }
 
 /* ================= FOOTER ================= */
