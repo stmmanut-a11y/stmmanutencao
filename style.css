@@ -22,7 +22,7 @@ img{
 .hero{
     position:relative;
     height:100vh;
-    background:url('caldeiraria1.jpeg') center/cover no-repeat;
+    background:url('banner.jpeg') center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
