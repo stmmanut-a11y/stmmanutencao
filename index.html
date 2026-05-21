@@ -2,365 +2,356 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STM Manutenção e Montagens</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STM Manutenção e Montagens</title>
 
-    <style>
+<style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, Helvetica, sans-serif;
-            scroll-behavior:smooth;
-        }
+/* ================= RESET ================= */
 
-        body{
-            background:#0d0d0d;
-            color:white;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
 
-        img{
-            max-width:100%;
-            display:block;
-        }
+body{
+    background:#0b0b0b;
+    color:white;
+    overflow-x:hidden;
+}
 
-        /* HERO */
+img{
+    max-width:100%;
+    display:block;
+}
 
-        .hero{
-            position:relative;
-            height:100vh;
-            background:url('caldeiraria.jpeg') center/cover no-repeat;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-        }
+/* ================= HERO ================= */
 
-        .overlay{
-            position:absolute;
-            width:100%;
-            height:100%;
-            background:rgba(0,0,0,0.75);
-        }
+.hero{
+    position:relative;
+    height:100vh;
+    background:url('caldeiraria1.jpeg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
 
-        .hero-content{
-            position:relative;
-            z-index:2;
-            max-width:800px;
-            padding:20px;
-        }
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.78);
+}
 
-        .logo{
-            width:180px;
-            margin-bottom:25px;
-        }
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:20px;
+}
 
-        .hero h1{
-            font-size:55px;
-            margin-bottom:20px;
-            color:#f5b400;
-        }
+.logo{
+    width:180px;
+    margin-bottom:20px;
+}
 
-        .hero p{
-            font-size:22px;
-            margin-bottom:35px;
-            line-height:1.6;
-        }
+.hero h1{
+    font-size:58px;
+    color:#f5b400;
+    margin-bottom:15px;
+}
 
-        .btn{
-            display:inline-block;
-            padding:16px 35px;
-            background:#f5b400;
-            color:black;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-            transition:0.3s;
-            margin:10px;
-        }
+.hero p{
+    font-size:22px;
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:25px;
+}
 
-        .btn:hover{
-            background:white;
-            transform:scale(1.05);
-        }
+/* BOTÃO */
 
-        /* DIVISORIA */
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#f5b400;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;
+    transition:0.3s;
+    margin:8px;
+}
 
-        .divisoria{
-            width:100%;
-            height:3px;
-            background:#f5b400;
-        }
+.btn:hover{
+    background:#fff;
+    transform:scale(1.05);
+}
 
-        /* SOBRE */
+/* ================= SEÇÕES ================= */
 
-        .sobre{
-            padding:90px 10%;
-            background:#111;
-        }
+.section{
+    padding:80px 10%;
+}
 
-        .sobre-container{
-            display:flex;
-            gap:60px;
-            align-items:center;
-            justify-content:center;
-            flex-wrap:wrap;
-        }
+/* ================= DIVISÓRIA ================= */
 
-        .sobre-texto{
-            flex:1;
-            min-width:320px;
-        }
+.divisoria{
+    height:3px;
+    background:#f5b400;
+    width:100%;
+}
 
-        .sobre-texto h2{
-            font-size:42px;
-            margin-bottom:30px;
-            color:#f5b400;
-        }
+/* ================= SOBRE ================= */
 
-        .sobre-texto p{
-            margin-bottom:22px;
-            line-height:1.9;
-            color:#ddd;
-            font-size:18px;
-        }
+.sobre{
+    background:#111;
+}
 
-        .sobre-slider{
-            flex:1;
-            min-width:320px;
-            overflow:hidden;
-            border-radius:12px;
-        }
+.sobre-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:50px;
+    align-items:center;
+}
 
-        .slides{
-            display:flex;
-            width:400%;
-            animation:slide 16s infinite;
-        }
+.sobre-texto{
+    flex:1;
+    min-width:320px;
+}
 
-        .slides img{
-            width:100%;
-            height:500px;
-            object-fit:cover;
-        }
+.sobre-texto h2{
+    font-size:42px;
+    color:#f5b400;
+    margin-bottom:20px;
+}
 
-        @keyframes slide{
+.sobre-texto p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:12px;
+    font-size:18px;
+}
 
-            0%{transform:translateX(0%);}
-            20%{transform:translateX(0%);}
-            25%{transform:translateX(-100%);}
-            45%{transform:translateX(-100%);}
-            50%{transform:translateX(-200%);}
-            70%{transform:translateX(-200%);}
-            75%{transform:translateX(-300%);}
-            95%{transform:translateX(-300%);}
-            100%{transform:translateX(0%);}
-        }
+/* SLIDER SOBRE */
 
-        /* SERVICOS */
+.sobre-slider{
+    flex:1;
+    min-width:320px;
+    overflow:hidden;
+    border-radius:12px;
+}
 
-        .servicos{
-            padding:90px 10%;
-            text-align:center;
-            background:#0d0d0d;
-        }
+.slides{
+    display:flex;
+    width:600%;
+    animation:slide 24s infinite;
+}
 
-        .servicos h2{
-            font-size:42px;
-            margin-bottom:50px;
-            color:#f5b400;
-        }
+.slides img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+}
 
-        .grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:30px;
-        }
+/* ANIMAÇÃO */
 
-        .card{
-            background:#1b1b1b;
-            padding:40px 30px;
-            border-radius:12px;
-            transition:0.3s;
-            border:1px solid #2b2b2b;
-        }
+@keyframes slide{
+    0%,15%{transform:translateX(0%);}
+    20%,35%{transform:translateX(-100%);}
+    40%,55%{transform:translateX(-200%);}
+    60%,75%{transform:translateX(-300%);}
+    80%,95%{transform:translateX(-400%);}
+    100%{transform:translateX(-500%);}
+}
 
-        .card:hover{
-            transform:translateY(-10px);
-            border-color:#f5b400;
-        }
+/* ================= SERVIÇOS ================= */
 
-        .card h3{
-            color:#f5b400;
-            margin-bottom:20px;
-            font-size:26px;
-        }
+.servicos{
+    background:#0b0b0b;
+    text-align:center;
+}
 
-        .card p{
-            color:#ccc;
-            line-height:1.7;
-        }
+.servicos h2{
+    font-size:42px;
+    color:#f5b400;
+    margin-bottom:40px;
+}
 
-        /* HERO PROJETO */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
 
-        .hero-projeto{
-            display:flex;
-            flex-wrap:wrap;
-            align-items:center;
-            background:#111;
-        }
+.card{
+    background:#161616;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #2a2a2a;
+    transition:0.3s;
+}
 
-        .texto-projeto{
-            flex:1;
-            padding:60px;
-        }
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#f5b400;
+}
 
-        .texto-projeto h2{
-            font-size:42px;
-            color:#f5b400;
-            line-height:1.4;
-        }
+.card h3{
+    color:#f5b400;
+    margin-bottom:10px;
+}
 
-        .hero-projeto img{
-            flex:1;
-            width:100%;
-            min-height:500px;
-            object-fit:cover;
-        }
+/* ================= SLIDERS ================= */
 
-        /* SLIDER */
+.slider-section{
+    background:#0b0b0b;
+    text-align:center;
+}
 
-        .slider-section{
-            padding:80px 5%;
-            text-align:center;
-            background:#0d0d0d;
-        }
+.slider-section h2{
+    font-size:40px;
+    color:#f5b400;
+    margin-bottom:30px;
+}
 
-        .slider-section h2{
-            font-size:40px;
-            margin-bottom:40px;
-            color:#f5b400;
-        }
+.slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
 
-        .slider{
-            display:flex;
-            gap:20px;
-            overflow-x:auto;
-            padding-bottom:10px;
-        }
+.slider img{
+    width:400px;
+    height:300px;
+    object-fit:cover;
+    border-radius:12px;
+    flex-shrink:0;
+}
 
-        .slider img{
-            width:400px;
-            height:300px;
-            object-fit:cover;
-            border-radius:12px;
-            flex-shrink:0;
-        }
+/* ================= CONTATO ================= */
 
-        /* CONTATO */
+.contato{
+    background:#0b0b0b;
+    text-align:center;
+}
 
-        .contato{
-            padding:90px 10%;
-            text-align:center;
-            background:#0d0d0d;
-        }
+.contato h2{
+    font-size:42px;
+    color:#f5b400;
+    margin-bottom:20px;
+}
 
-        .contato h2{
-            font-size:42px;
-            margin-bottom:40px;
-            color:#f5b400;
-        }
+.contato p{
+    color:#ccc;
+    margin-top:10px;
+}
 
-        .contato p{
-            margin-top:18px;
-            font-size:18px;
-            color:#ccc;
-        }
+/* ================= RESPONSÁVEL ================= */
 
-        /* RESPONSAVEL */
+.responsavel{
+    background:#111;
+    text-align:center;
+}
 
-        .responsavel{
-            padding:80px 10%;
-            background:#111;
-            text-align:center;
-        }
+.responsavel h2{
+    font-size:40px;
+    color:#f5b400;
+    margin-bottom:20px;
+}
 
-        .responsavel h2{
-            font-size:40px;
-            color:#f5b400;
-            margin-bottom:40px;
-        }
+.responsavel-box{
+    background:#1a1a1a;
+    padding:35px;
+    max-width:700px;
+    margin:auto;
+    border-radius:12px;
+}
 
-        .responsavel-box{
-            background:#1b1b1b;
-            padding:40px;
-            border-radius:12px;
-            max-width:700px;
-            margin:auto;
-            border:1px solid #333;
-        }
+/* ================= FOOTER ================= */
 
-        .responsavel-box p{
-            margin-bottom:18px;
-            font-size:20px;
-            color:#ddd;
-        }
+footer{
+    background:black;
+    padding:25px;
+    text-align:center;
+    color:#777;
+}
 
-        footer{
-            background:black;
-            padding:30px;
-            text-align:center;
-            color:#888;
-        }
+/* ================= RESPONSIVO ================= */
 
-        @media(max-width:768px){
-            .hero h1{font-size:38px;}
-            .hero p{font-size:18px;}
-            .texto-projeto{padding:40px 25px;}
-            .slides img{height:350px;}
-            .slider img{width:300px;height:220px;}
-        }
+@media(max-width:768px){
 
-    </style>
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.slides img{
+    height:350px;
+}
+
+.slider img{
+    width:280px;
+    height:200px;
+}
+
+.section{
+    padding:60px 6%;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <!-- HERO -->
 <header class="hero">
-    <div class="overlay"></div>
+<div class="overlay"></div>
 
-    <div class="hero-content">
-        <img src="logo.jpeg" class="logo">
-        <h1>STM Manutenção e Montagens</h1>
-        <p>Soluções industriais em caldeiraria, montagem e manutenção de estruturas metálicas.</p>
+<div class="hero-content">
+    <img src="logo.jpeg" class="logo">
+    <h1>STM Manutenção e Montagens</h1>
+    <p>Soluções industriais em caldeiraria, montagem e manutenção de estruturas metálicas.</p>
 
-        <a href="https://wa.me/5513974115419" class="btn">Solicitar Orçamento</a>
-    </div>
+    <a class="btn" href="https://wa.me/5513974115419">Solicitar Orçamento</a>
+</div>
 </header>
 
 <div class="divisoria"></div>
 
 <!-- SOBRE -->
-<section class="sobre">
+<section class="sobre section">
 
 <div class="sobre-container">
 
-    <div class="sobre-texto">
-        <h2>Sobre a STM</h2>
-        <p>Empresa industrial especializada em estruturas metálicas.</p>
-    </div>
+<div class="sobre-texto">
+<h2>Sobre a STM</h2>
+<p>Empresa especializada em estruturas metálicas industriais.</p>
+<p>Atuação em caldeiraria, dutos e montagem industrial.</p>
+</div>
 
-    <div class="sobre-slider">
-        <div class="slides">
-            <img src="caldeiraria.jpeg">
-            <img src="cavalete1.jpeg">
-            <img src="duto1.jpeg">
-            <img src="duto2.jpeg">
-        </div>
-    </div>
+<div class="sobre-slider">
+<div class="slides">
+
+<img src="caldeiraria1.jpeg">
+<img src="cavalete1.jpeg">
+<img src="duto1.jpeg">
+<img src="duto2.jpeg">
+<img src="roldana1.jpeg">
+<img src="roldana2.jpeg">
+
+</div>
+</div>
 
 </div>
 
@@ -368,8 +359,8 @@
 
 <div class="divisoria"></div>
 
-<!-- SERVICOS -->
-<section class="servicos">
+<!-- SERVIÇOS -->
+<section class="servicos section">
 
 <h2>Nossos Serviços</h2>
 
@@ -377,12 +368,17 @@
 
 <div class="card">
 <h3>Caldeiraria</h3>
-<p>Estruturas metálicas.</p>
+<p>Estruturas metálicas industriais.</p>
 </div>
 
 <div class="card">
-<h3>Dutos Industriais</h3>
-<p>Ventilação e exaustão.</p>
+<h3>Dutos</h3>
+<p>Ventilação e exaustão industrial.</p>
+</div>
+
+<div class="card">
+<h3>Manutenção</h3>
+<p>Serviços industriais completos.</p>
 </div>
 
 </div>
@@ -392,13 +388,15 @@
 <div class="divisoria"></div>
 
 <!-- DUTOS -->
-<section class="slider-section">
+<section class="slider-section section">
 
 <h2>Dutos Industriais</h2>
 
 <div class="slider">
+
 <img src="duto1.jpeg">
 <img src="duto2.jpeg">
+
 </div>
 
 </section>
@@ -406,7 +404,7 @@
 <div class="divisoria"></div>
 
 <!-- CONTATO -->
-<section class="contato">
+<section class="contato section">
 
 <h2>Contato</h2>
 
@@ -417,6 +415,7 @@
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 STM Manutenção e Montagens
 </footer>
