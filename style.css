@@ -1,5 +1,5 @@
 /* =========================================
-   RESET
+   RESET GERAL
 ========================================= */
 
 *{
@@ -37,8 +37,7 @@ img{
 
 .overlay{
     position:absolute;
-    width:100%;
-    height:100%;
+    inset:0;
     background:rgba(0,0,0,0.75);
 }
 
@@ -51,7 +50,6 @@ img{
 
 .logo{
     width:180px;
-    margin:auto;
     margin-bottom:25px;
 }
 
@@ -134,17 +132,16 @@ img{
     font-size:18px;
 }
 
+/* =========================================
+   SLIDER SOBRE
+========================================= */
+
 .sobre-slider{
     flex:1;
     min-width:320px;
     overflow:hidden;
     border-radius:12px;
-    position:relative;
 }
-
-/* =========================================
-   SLIDER SOBRE
-========================================= */
 
 .slides{
     display:flex;
@@ -159,40 +156,15 @@ img{
     flex-shrink:0;
 }
 
-/* =========================================
-   ANIMAÇÃO
-========================================= */
-
+/* animação corrigida */
 @keyframes slide{
 
-    0%, 14%{
-        transform:translateX(0%);
-    }
-
-    16%, 30%{
-        transform:translateX(-100%);
-    }
-
-    32%, 46%{
-        transform:translateX(-200%);
-    }
-
-    48%, 62%{
-        transform:translateX(-300%);
-    }
-
-    64%, 78%{
-        transform:translateX(-400%);
-    }
-
-    80%, 94%{
-        transform:translateX(-500%);
-    }
-
-    100%{
-        transform:translateX(0%);
-    }
-
+    0%,15%{transform:translateX(0%);}
+    20%,35%{transform:translateX(-100%);}
+    40%,55%{transform:translateX(-200%);}
+    60%,75%{transform:translateX(-300%);}
+    80%,95%{transform:translateX(-400%);}
+    100%{transform:translateX(-500%);}
 }
 
 /* =========================================
@@ -252,6 +224,12 @@ img{
     background:#111;
 }
 
+.hero-projeto img{
+    flex:1;
+    min-height:500px;
+    object-fit:cover;
+}
+
 .texto-projeto{
     flex:1;
     padding:60px;
@@ -260,14 +238,6 @@ img{
 .texto-projeto h2{
     font-size:42px;
     color:#f5b400;
-    line-height:1.5;
-}
-
-.hero-projeto img{
-    flex:1;
-    width:100%;
-    min-height:500px;
-    object-fit:cover;
 }
 
 /* =========================================
@@ -276,8 +246,8 @@ img{
 
 .slider-section{
     padding:80px 5%;
-    background:#0d0d0d;
     text-align:center;
+    background:#0d0d0d;
 }
 
 .slider-section h2{
@@ -291,7 +261,6 @@ img{
     gap:20px;
     overflow-x:auto;
     padding-bottom:10px;
-    scroll-snap-type:x mandatory;
 }
 
 .slider::-webkit-scrollbar{
@@ -308,35 +277,12 @@ img{
     height:300px;
     object-fit:cover;
     border-radius:12px;
-    transition:0.3s;
     flex-shrink:0;
-    scroll-snap-align:center;
+    transition:0.3s;
 }
 
 .slider img:hover{
     transform:scale(1.03);
-}
-
-/* =========================================
-   SEGURANÇA
-========================================= */
-
-.seguranca{
-    padding:80px 10%;
-    text-align:center;
-    background:#111;
-}
-
-.seguranca h2{
-    font-size:40px;
-    margin-bottom:40px;
-    color:#f5b400;
-}
-
-.seguranca img{
-    max-width:900px;
-    margin:auto;
-    border-radius:12px;
 }
 
 /* =========================================
@@ -409,11 +355,6 @@ footer{
 
 @media(max-width:768px){
 
-    .hero{
-        height:auto;
-        padding:120px 20px;
-    }
-
     .hero h1{
         font-size:38px;
     }
@@ -438,13 +379,4 @@ footer{
         width:300px;
         height:220px;
     }
-
-    .sobre,
-    .servicos,
-    .contato,
-    .seguranca,
-    .responsavel{
-        padding:70px 6%;
-    }
-
 }
