@@ -1,175 +1,450 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #f5f5f5;
-    color: #222;
+body{
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
 }
 
-.hero {
-    height: 100vh;
-    background: url("banner.jpeg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
+img{
+    max-width:100%;
+    display:block;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    background:url('caldeiraria.jpeg') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-.hero-content {
-    position: relative;
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
 }
 
-.logo {
-    width: 120px;
-    margin-bottom: 15px;
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    padding:20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #ffb400;
-    color: #000;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    margin: 5px;
+.logo{
+    width:180px;
+    margin:auto;
+    margin-bottom:25px;
 }
 
-.whatsapp {
-    background: #25d366;
-    color: #fff;
+.hero h1{
+    font-size:58px;
+    margin-bottom:20px;
+    color:#f5b400;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+.hero p{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:35px;
+    color:#eee;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
+/* =========================================
+   BOTÕES
+========================================= */
+
+.btn{
+    display:inline-block;
+    padding:16px 35px;
+    background:#f5b400;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+    margin:10px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
 }
 
-.card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
+/* =========================================
+   DIVISÓRIA
+========================================= */
+
+.divisoria{
+    width:100%;
+    height:3px;
+    background:#f5b400;
 }
 
-.divisoria {
-    height: 2px;
-    width: 80%;
-    margin: 40px auto;
-    background: linear-gradient(to right, transparent, #bbb, transparent);
+/* =========================================
+   SOBRE
+========================================= */
+
+.sobre{
+    padding:90px 10%;
+    background:#111;
 }
 
-.slider {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 10px;
+.sobre-container{
+    display:flex;
+    gap:60px;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-.slider img {
-    height: 250px;
-    border-radius: 10px;
-    flex-shrink: 0;
+.sobre-texto{
+    flex:1;
+    min-width:320px;
 }
 
-.hero-projeto {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 0;
-    background: transparent;
+.sobre-texto h2{
+    font-size:42px;
+    margin-bottom:30px;
+    color:#f5b400;
 }
 
-.hero-projeto img {
-    width: auto;
-    max-width: 90%;
-    height: auto;
-    display: block;
+.sobre-texto p{
+    margin-bottom:22px;
+    line-height:1.9;
+    color:#ddd;
+    font-size:18px;
 }
 
-.texto-projeto {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.35);
-    color: #fff;
-    font-size: 2rem;
-    text-align: center;
-    padding: 20px;
+.sobre-slider{
+    flex:1;
+    min-width:320px;
+    overflow:hidden;
+    border-radius:12px;
+    position:relative;
 }
 
-.seguranca img {
-    width: 100%;
-    max-width: 700px;
-    border-radius: 10px;
-    display: block;
-    margin: auto;
+/* =========================================
+   SLIDER SOBRE
+========================================= */
+
+.slides{
+    display:flex;
+    width:600%;
+    animation:slide 24s infinite;
 }
 
-.contato {
-    text-align: center;
+.slides img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    flex-shrink:0;
 }
 
-.contato p {
-    margin: 6px 0;
-}
+/* =========================================
+   ANIMAÇÃO
+========================================= */
 
-.responsavel {
-    text-align: center;
-    background: #fff;
-    padding: 50px 20px;
-    border-radius: 10px;
-}
+@keyframes slide{
 
-.responsavel-box {
-    margin-top: 20px;
-    display: inline-block;
-    background: #f5f5f5;
-    padding: 20px 30px;
-    border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #fff;
-}
-
-@media (max-width: 768px) {
-    .slider img {
-        height: 180px;
+    0%, 14%{
+        transform:translateX(0%);
     }
 
-    .texto-projeto {
-        font-size: 1.3rem;
+    16%, 30%{
+        transform:translateX(-100%);
     }
+
+    32%, 46%{
+        transform:translateX(-200%);
+    }
+
+    48%, 62%{
+        transform:translateX(-300%);
+    }
+
+    64%, 78%{
+        transform:translateX(-400%);
+    }
+
+    80%, 94%{
+        transform:translateX(-500%);
+    }
+
+    100%{
+        transform:translateX(0%);
+    }
+
+}
+
+/* =========================================
+   SERVIÇOS
+========================================= */
+
+.servicos{
+    padding:90px 10%;
+    text-align:center;
+    background:#0d0d0d;
+}
+
+.servicos h2{
+    font-size:42px;
+    margin-bottom:50px;
+    color:#f5b400;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1b1b1b;
+    padding:40px 30px;
+    border-radius:12px;
+    border:1px solid #2b2b2b;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#f5b400;
+}
+
+.card h3{
+    color:#f5b400;
+    margin-bottom:20px;
+    font-size:26px;
+}
+
+.card p{
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* =========================================
+   HERO PROJETO
+========================================= */
+
+.hero-projeto{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    background:#111;
+}
+
+.texto-projeto{
+    flex:1;
+    padding:60px;
+}
+
+.texto-projeto h2{
+    font-size:42px;
+    color:#f5b400;
+    line-height:1.5;
+}
+
+.hero-projeto img{
+    flex:1;
+    width:100%;
+    min-height:500px;
+    object-fit:cover;
+}
+
+/* =========================================
+   SLIDERS
+========================================= */
+
+.slider-section{
+    padding:80px 5%;
+    background:#0d0d0d;
+    text-align:center;
+}
+
+.slider-section h2{
+    font-size:40px;
+    margin-bottom:40px;
+    color:#f5b400;
+}
+
+.slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:10px;
+    scroll-snap-type:x mandatory;
+}
+
+.slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.slider::-webkit-scrollbar-thumb{
+    background:#f5b400;
+    border-radius:20px;
+}
+
+.slider img{
+    width:400px;
+    height:300px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:0.3s;
+    flex-shrink:0;
+    scroll-snap-align:center;
+}
+
+.slider img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================================
+   SEGURANÇA
+========================================= */
+
+.seguranca{
+    padding:80px 10%;
+    text-align:center;
+    background:#111;
+}
+
+.seguranca h2{
+    font-size:40px;
+    margin-bottom:40px;
+    color:#f5b400;
+}
+
+.seguranca img{
+    max-width:900px;
+    margin:auto;
+    border-radius:12px;
+}
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.contato{
+    padding:90px 10%;
+    text-align:center;
+    background:#0d0d0d;
+}
+
+.contato h2{
+    font-size:42px;
+    margin-bottom:40px;
+    color:#f5b400;
+}
+
+.contato p{
+    margin-top:18px;
+    color:#ccc;
+    font-size:18px;
+}
+
+/* =========================================
+   RESPONSÁVEL
+========================================= */
+
+.responsavel{
+    padding:80px 10%;
+    background:#111;
+    text-align:center;
+}
+
+.responsavel h2{
+    font-size:40px;
+    color:#f5b400;
+    margin-bottom:40px;
+}
+
+.responsavel-box{
+    background:#1b1b1b;
+    padding:40px;
+    border-radius:12px;
+    max-width:700px;
+    margin:auto;
+    border:1px solid #333;
+}
+
+.responsavel-box p{
+    margin-bottom:18px;
+    font-size:20px;
+    color:#ddd;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+    background:black;
+    padding:30px;
+    text-align:center;
+    color:#888;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media(max-width:768px){
+
+    .hero{
+        height:auto;
+        padding:120px 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .texto-projeto{
+        padding:40px 25px;
+    }
+
+    .texto-projeto h2{
+        font-size:32px;
+    }
+
+    .slides img{
+        height:350px;
+    }
+
+    .slider img{
+        width:300px;
+        height:220px;
+    }
+
+    .sobre,
+    .servicos,
+    .contato,
+    .seguranca,
+    .responsavel{
+        padding:70px 6%;
+    }
+
 }
