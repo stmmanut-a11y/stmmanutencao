@@ -1,6 +1,4 @@
-/* =========================
-RESET
-========================= */
+/* ================= RESET ================= */
 
 *{
     margin:0;
@@ -21,14 +19,12 @@ img{
     display:block;
 }
 
-/* =========================
-HERO
-========================= */
+/* ================= HERO ================= */
 
 .hero{
     position:relative;
     height:100vh;
-    background:url('caldeiraria.jpeg') center/cover no-repeat;
+    background:url('caldeiraria1.jpeg') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -66,9 +62,7 @@ HERO
     margin-bottom:25px;
 }
 
-/* =========================
-BOTÃO
-========================= */
+/* ================= BOTÕES ================= */
 
 .btn{
     display:inline-block;
@@ -87,27 +81,21 @@ BOTÃO
     transform:scale(1.05);
 }
 
-/* =========================
-DIVISÓRIA
-========================= */
+/* ================= DIVISÓRIA ================= */
 
 .divisoria{
+    width:100%;
     height:3px;
     background:#f5b400;
-    width:100%;
 }
 
-/* =========================
-SEÇÕES PADRÃO
-========================= */
+/* ================= SEÇÕES PADRÃO ================= */
 
 .section{
     padding:80px 10%;
 }
 
-/* =========================
-SOBRE
-========================= */
+/* ================= SOBRE ================= */
 
 .sobre{
     background:#111;
@@ -138,7 +126,7 @@ SOBRE
     font-size:18px;
 }
 
-/* SLIDER SOBRE */
+/* SLIDES SOBRE */
 
 .sobre-slider{
     flex:1;
@@ -159,7 +147,7 @@ SOBRE
     object-fit:cover;
 }
 
-/* ANIMAÇÃO */
+/* ANIMAÇÃO SLIDER */
 
 @keyframes slide{
     0%,15%{transform:translateX(0%);}
@@ -170,13 +158,11 @@ SOBRE
     100%{transform:translateX(-500%);}
 }
 
-/* =========================
-SERVIÇOS
-========================= */
+/* ================= SERVIÇOS ================= */
 
 .servicos{
-    background:#0b0b0b;
     text-align:center;
+    background:#0b0b0b;
 }
 
 .servicos h2{
@@ -209,13 +195,11 @@ SERVIÇOS
     margin-bottom:10px;
 }
 
-/* =========================
-DUTOS / SLIDER
-========================= */
+/* ================= SLIDER SEÇÕES ================= */
 
 .slider-section{
-    background:#0b0b0b;
     text-align:center;
+    background:#0b0b0b;
 }
 
 .slider-section h2{
@@ -229,6 +213,7 @@ DUTOS / SLIDER
     gap:20px;
     overflow-x:auto;
     padding-bottom:10px;
+    scroll-snap-type:x mandatory;
 }
 
 .slider img{
@@ -237,15 +222,30 @@ DUTOS / SLIDER
     object-fit:cover;
     border-radius:12px;
     flex-shrink:0;
+    scroll-snap-align:center;
+    transition:0.3s;
 }
 
-/* =========================
-CONTATO
-========================= */
+.slider img:hover{
+    transform:scale(1.03);
+}
+
+/* SCROLLBAR BONITO */
+
+.slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.slider::-webkit-scrollbar-thumb{
+    background:#f5b400;
+    border-radius:20px;
+}
+
+/* ================= CONTATO ================= */
 
 .contato{
-    background:#0b0b0b;
     text-align:center;
+    background:#0b0b0b;
 }
 
 .contato h2{
@@ -259,13 +259,11 @@ CONTATO
     margin-top:10px;
 }
 
-/* =========================
-RESPONSÁVEL
-========================= */
+/* ================= RESPONSÁVEL ================= */
 
 .responsavel{
-    background:#111;
     text-align:center;
+    background:#111;
 }
 
 .responsavel h2{
@@ -280,11 +278,10 @@ RESPONSÁVEL
     max-width:700px;
     margin:auto;
     border-radius:12px;
+    border:1px solid #333;
 }
 
-/* =========================
-FOOTER
-========================= */
+/* ================= FOOTER ================= */
 
 footer{
     background:black;
@@ -293,9 +290,7 @@ footer{
     color:#777;
 }
 
-/* =========================
-RESPONSIVO
-========================= */
+/* ================= RESPONSIVO ================= */
 
 @media(max-width:768px){
 
