@@ -2,8 +2,10 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>STM Manutenção e Montagens</title>
 
     <style>
@@ -12,13 +14,18 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Arial, Helvetica, sans-serif;
             scroll-behavior:smooth;
         }
 
         body{
             background:#0d0d0d;
             color:white;
+        }
+
+        img{
+            max-width:100%;
+            display:block;
         }
 
         /* HERO */
@@ -43,25 +50,27 @@
         .hero-content{
             position:relative;
             z-index:2;
-            max-width:800px;
+            max-width:850px;
             padding:20px;
         }
 
         .logo{
             width:180px;
+            margin:auto;
             margin-bottom:25px;
         }
 
         .hero h1{
-            font-size:55px;
+            font-size:58px;
             margin-bottom:20px;
             color:#f5b400;
         }
 
         .hero p{
             font-size:22px;
+            line-height:1.7;
             margin-bottom:35px;
-            line-height:1.6;
+            color:#eee;
         }
 
         .btn{
@@ -131,8 +140,8 @@
 
         .slides{
             display:flex;
-            width:400%;
-            animation:slide 16s infinite;
+            width:600%;
+            animation:slide 24s infinite;
         }
 
         .slides img{
@@ -143,36 +152,24 @@
 
         @keyframes slide{
 
-            0%{
+            0%,15%{
                 transform:translateX(0%);
             }
 
-            20%{
-                transform:translateX(0%);
-            }
-
-            25%{
+            20%,35%{
                 transform:translateX(-100%);
             }
 
-            45%{
-                transform:translateX(-100%);
-            }
-
-            50%{
+            40%,55%{
                 transform:translateX(-200%);
             }
 
-            70%{
-                transform:translateX(-200%);
-            }
-
-            75%{
+            60%,75%{
                 transform:translateX(-300%);
             }
 
-            95%{
-                transform:translateX(-300%);
+            80%,95%{
+                transform:translateX(-400%);
             }
 
             100%{
@@ -181,7 +178,7 @@
 
         }
 
-        /* SERVICOS */
+        /* SERVIÇOS */
 
         .servicos{
             padding:90px 10%;
@@ -205,8 +202,8 @@
             background:#1b1b1b;
             padding:40px 30px;
             border-radius:12px;
-            transition:0.3s;
             border:1px solid #2b2b2b;
+            transition:0.3s;
         }
 
         .card:hover{
@@ -242,7 +239,7 @@
         .texto-projeto h2{
             font-size:42px;
             color:#f5b400;
-            line-height:1.4;
+            line-height:1.5;
         }
 
         .hero-projeto img{
@@ -252,12 +249,12 @@
             object-fit:cover;
         }
 
-        /* SLIDER SECTION */
+        /* SLIDERS */
 
         .slider-section{
             padding:80px 5%;
-            text-align:center;
             background:#0d0d0d;
+            text-align:center;
         }
 
         .slider-section h2{
@@ -271,6 +268,16 @@
             gap:20px;
             overflow-x:auto;
             padding-bottom:10px;
+            scroll-snap-type:x mandatory;
+        }
+
+        .slider::-webkit-scrollbar{
+            height:8px;
+        }
+
+        .slider::-webkit-scrollbar-thumb{
+            background:#f5b400;
+            border-radius:20px;
         }
 
         .slider img{
@@ -280,6 +287,7 @@
             border-radius:12px;
             transition:0.3s;
             flex-shrink:0;
+            scroll-snap-align:center;
         }
 
         .slider img:hover{
@@ -301,8 +309,8 @@
         }
 
         .seguranca img{
-            width:100%;
             max-width:900px;
+            margin:auto;
             border-radius:12px;
         }
 
@@ -322,11 +330,11 @@
 
         .contato p{
             margin-top:18px;
-            font-size:18px;
             color:#ccc;
+            font-size:18px;
         }
 
-        /* RESPONSAVEL */
+        /* RESPONSÁVEL */
 
         .responsavel{
             padding:80px 10%;
@@ -409,17 +417,20 @@
 
         <div class="hero-content">
 
-            <img src="logo.jpeg" class="logo">
+            <img src="logo.jpeg" class="logo" alt="Logo STM">
 
             <h1>STM Manutenção e Montagens</h1>
 
             <p>
-                Soluções industriais em caldeiraria, fabricação,
-                montagem e manutenção de estruturas metálicas.
+                Soluções industriais em caldeiraria,
+                fabricação, montagem e manutenção
+                de estruturas metálicas.
             </p>
 
-            <a href="https://wa.me/5513974115419" target="_blank" class="btn">
-                Solicitar Orçamento
+            <a href="https://wa.me/5513974115419"
+               target="_blank"
+               class="btn">
+               Solicitar Orçamento
             </a>
 
         </div>
@@ -439,32 +450,22 @@
                 <h2>Sobre a STM</h2>
 
                 <p>
-                    Fundada em 2018, a STM Manutenção e Montagens
-                    atua no setor industrial, portuário e civil,
-                    oferecendo soluções completas em fabricação,
-                    montagem e manutenção de estruturas metálicas.
+                    Fundada em 2018, a STM atua nos setores
+                    industrial, portuário e civil oferecendo
+                    soluções completas em fabricação,
+                    montagem e manutenção.
                 </p>
 
                 <p>
-                    A empresa é especializada em caldeiraria,
-                    fabricação de peças metálicas, dutos industriais,
-                    sistemas de ventilação e exaustão, estruturas
-                    metálicas e manutenção preventiva e corretiva
-                    de equipamentos industriais.
+                    Especializada em caldeiraria,
+                    dutos industriais, ventilação,
+                    exaustão, estruturas metálicas
+                    e manutenção industrial.
                 </p>
 
                 <p>
-                    Com foco em qualidade, segurança e eficiência,
-                    a STM desenvolve projetos personalizados,
-                    atendendo às necessidades específicas de cada cliente
-                    com alto padrão técnico e excelência operacional.
-                </p>
-
-                <p>
-                    Nossa equipe possui experiência em ambientes
-                    industriais e portuários, garantindo serviços
-                    confiáveis, duráveis e executados dentro
-                    das normas de segurança do trabalho.
+                    Trabalhamos com foco em qualidade,
+                    segurança, eficiência e excelência operacional.
                 </p>
 
             </div>
@@ -473,10 +474,12 @@
 
                 <div class="slides">
 
-                    <img src="caldeiraria.jpeg">
-                    <img src="cavalete1.jpeg">
-                    <img src="fabricacao-dutos1.jpeg">
-                    <img src="roldana1.jpeg">
+                    <img src="caldeiraria.jpeg" alt="">
+                    <img src="cavalete1.jpeg" alt="">
+                    <img src="fabricacao-dutos1.jpeg" alt="">
+                    <img src="fabricacao-dutos2.jpeg" alt="">
+                    <img src="roldana1.jpeg" alt="">
+                    <img src="suporte-bandeja-protecao.jpeg" alt="">
 
                 </div>
 
@@ -499,32 +502,32 @@
             <div class="card">
                 <h3>Caldeiraria</h3>
                 <p>
-                    Fabricação e montagem de estruturas metálicas
-                    industriais sob medida.
+                    Fabricação e montagem
+                    de estruturas metálicas.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Dutos Industriais</h3>
                 <p>
-                    Sistemas de ventilação, exaustão
-                    e condução industrial.
+                    Sistemas de ventilação,
+                    exaustão e condução.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Estruturas Metálicas</h3>
                 <p>
-                    Projetos personalizados para aplicações
-                    industriais, civis e portuárias.
+                    Projetos industriais,
+                    civis e portuários.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Manutenção Industrial</h3>
                 <p>
-                    Serviços preventivos e corretivos
-                    em equipamentos e estruturas.
+                    Serviços preventivos
+                    e corretivos industriais.
                 </p>
             </div>
 
@@ -534,7 +537,7 @@
 
     <div class="divisoria"></div>
 
-    <!-- PROJETO -->
+    <!-- CALDEIRARIA -->
 
     <section class="hero-projeto">
 
@@ -547,7 +550,7 @@
 
         </div>
 
-        <img src="caldeiraria.jpeg">
+        <img src="caldeiraria.jpeg" alt="Caldeiraria Industrial">
 
     </section>
 
@@ -584,6 +587,10 @@
 
             <img src="fabricacao-dutos1.jpeg">
             <img src="fabricacao-dutos2.jpeg">
+            <img src="fabricacao-dutos3.jpeg">
+            <img src="fabricacao-dutos4.jpeg">
+            <img src="fabricacao-dutos5.jpeg">
+            <img src="fabricacao-dutos6.jpeg">
 
         </div>
 
@@ -640,25 +647,25 @@
 
     <!-- CONTATO -->
 
-    <section id="contato" class="contato">
+    <section class="contato">
 
         <h2>Contato</h2>
 
         <a class="btn"
            href="mailto:stmmanut@gmail.com">
-            📧 Solicitar por E-mail
+           📧 Solicitar por E-mail
         </a>
 
         <a class="btn"
            href="https://wa.me/5513974115419"
            target="_blank">
-            📱 WhatsApp
+           📱 WhatsApp
         </a>
 
         <a class="btn"
            href="https://instagram.com/stm_fabr.m"
            target="_blank">
-            📸 Instagram
+           📸 Instagram
         </a>
 
         <p>📞 (13) 97411-5419</p>
@@ -669,7 +676,7 @@
 
     <div class="divisoria"></div>
 
-    <!-- RESPONSAVEL -->
+    <!-- RESPONSÁVEL -->
 
     <section class="responsavel">
 
