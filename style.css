@@ -208,10 +208,9 @@ img{
 }
 
 .slider img{
-    width:100%;
-    height:auto;
-    max-height:100vh;
-    object-fit:contain;
+    width:400px;
+    height:300px;
+    object-fit:cover;
     border-radius:12px;
     flex-shrink:0;
     transition:0.3s;
@@ -330,5 +329,11 @@ footer{
     .foto-grande{
         height:70vh;
     }
+    .foto-grande{
+    width:100%;
+    height:100vh;
+    object-fit:contain;
+    background:black;
+}
 
 }
