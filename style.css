@@ -228,12 +228,13 @@ img{
 
 .foto-grande{
     width:100%;
-    height:100vh;
-    object-fit:cover;
-    border-radius:15px;
+    height:auto;
+    max-height:750px;
+    object-fit:contain;
+    background:black;
+    margin:auto;
     display:block;
 }
-
 /* CONTATO */
 
 .contato{
