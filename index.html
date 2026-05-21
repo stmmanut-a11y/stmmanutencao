@@ -30,7 +30,6 @@
         }
 
         /* HERO */
-
         .hero{
             position:relative;
             height:100vh;
@@ -91,8 +90,7 @@
             transform:scale(1.05);
         }
 
-        /* DIVISÓRIA */
-
+        /* DIVISORIA */
         .divisoria{
             width:100%;
             height:3px;
@@ -100,7 +98,6 @@
         }
 
         /* SOBRE */
-
         .sobre{
             padding:90px 10%;
             background:#111;
@@ -152,35 +149,15 @@
         }
 
         @keyframes slide{
-
-            0%,15%{
-                transform:translateX(0%);
-            }
-
-            20%,35%{
-                transform:translateX(-100%);
-            }
-
-            40%,55%{
-                transform:translateX(-200%);
-            }
-
-            60%,75%{
-                transform:translateX(-300%);
-            }
-
-            80%,95%{
-                transform:translateX(-400%);
-            }
-
-            100%{
-                transform:translateX(-500%);
-            }
-
+            0%,15%{transform:translateX(0%);}
+            20%,35%{transform:translateX(-100%);}
+            40%,55%{transform:translateX(-200%);}
+            60%,75%{transform:translateX(-300%);}
+            80%,95%{transform:translateX(-400%);}
+            100%{transform:translateX(-500%);}
         }
 
         /* SERVIÇOS */
-
         .servicos{
             padding:90px 10%;
             text-align:center;
@@ -204,12 +181,12 @@
             padding:40px 30px;
             border-radius:12px;
             border:1px solid #2b2b2b;
-            transition:0.3s;
         }
 
         .card:hover{
             transform:translateY(-10px);
             border-color:#f5b400;
+            transition:0.3s;
         }
 
         .card h3{
@@ -224,7 +201,6 @@
         }
 
         /* HERO PROJETO */
-
         .hero-projeto{
             display:flex;
             flex-wrap:wrap;
@@ -240,7 +216,6 @@
         .texto-projeto h2{
             font-size:42px;
             color:#f5b400;
-            line-height:1.5;
         }
 
         .hero-projeto img{
@@ -250,12 +225,11 @@
             object-fit:cover;
         }
 
-        /* SLIDERS */
-
+        /* SLIDER */
         .slider-section{
             padding:80px 5%;
-            background:#0d0d0d;
             text-align:center;
+            background:#0d0d0d;
         }
 
         .slider-section h2{
@@ -268,17 +242,6 @@
             display:flex;
             gap:20px;
             overflow-x:auto;
-            padding-bottom:10px;
-            scroll-snap-type:x mandatory;
-        }
-
-        .slider::-webkit-scrollbar{
-            height:8px;
-        }
-
-        .slider::-webkit-scrollbar-thumb{
-            background:#f5b400;
-            border-radius:20px;
         }
 
         .slider img{
@@ -286,17 +249,10 @@
             height:300px;
             object-fit:cover;
             border-radius:12px;
-            transition:0.3s;
             flex-shrink:0;
-            scroll-snap-align:center;
-        }
-
-        .slider img:hover{
-            transform:scale(1.03);
         }
 
         /* SEGURANÇA */
-
         .seguranca{
             padding:80px 10%;
             text-align:center;
@@ -316,7 +272,6 @@
         }
 
         /* CONTATO */
-
         .contato{
             padding:90px 10%;
             text-align:center;
@@ -332,11 +287,9 @@
         .contato p{
             margin-top:18px;
             color:#ccc;
-            font-size:18px;
         }
 
         /* RESPONSÁVEL */
-
         .responsavel{
             padding:80px 10%;
             background:#111;
@@ -355,7 +308,6 @@
             border-radius:12px;
             max-width:700px;
             margin:auto;
-            border:1px solid #333;
         }
 
         .responsavel-box p{
@@ -364,44 +316,11 @@
             color:#ddd;
         }
 
-        /* FOOTER */
-
         footer{
             background:black;
             padding:30px;
             text-align:center;
             color:#888;
-        }
-
-        /* RESPONSIVO */
-
-        @media(max-width:768px){
-
-            .hero h1{
-                font-size:38px;
-            }
-
-            .hero p{
-                font-size:18px;
-            }
-
-            .texto-projeto{
-                padding:40px 25px;
-            }
-
-            .texto-projeto h2{
-                font-size:32px;
-            }
-
-            .slides img{
-                height:350px;
-            }
-
-            .slider img{
-                width:300px;
-                height:220px;
-            }
-
         }
 
     </style>
@@ -410,311 +329,74 @@
 
 <body>
 
-    <!-- HERO -->
+<header class="hero">
+    <div class="overlay"></div>
 
-    <header class="hero">
+    <div class="hero-content">
+        <img src="logo.jpeg" class="logo">
+        <h1>STM Manutenção e Montagens</h1>
 
-        <div class="overlay"></div>
+        <p>Soluções industriais em caldeiraria, montagem e manutenção metálica.</p>
 
-        <div class="hero-content">
+        <a class="btn" href="https://wa.me/5513974115419">Solicitar Orçamento</a>
+    </div>
+</header>
 
-            <img src="logo.jpeg" class="logo" alt="Logo STM">
+<div class="divisoria"></div>
 
-            <h1>STM Manutenção e Montagens</h1>
+<section class="sobre">
 
-            <p>
-                Soluções industriais em caldeiraria,
-                fabricação, montagem e manutenção
-                de estruturas metálicas.
-            </p>
+    <div class="sobre-container">
 
-            <a href="https://wa.me/5513974115419"
-               target="_blank"
-               class="btn">
-               Solicitar Orçamento
-            </a>
-
+        <div class="sobre-texto">
+            <h2>Sobre a STM</h2>
+            <p>Atuação industrial, portuária e civil com excelência em estruturas metálicas.</p>
         </div>
 
-    </header>
+        <div class="sobre-slider">
+            <div class="slides">
 
-    <div class="divisoria"></div>
-
-    <!-- SOBRE -->
-
-    <section class="sobre">
-
-        <div class="sobre-container">
-
-            <div class="sobre-texto">
-
-                <h2>Sobre a STM</h2>
-
-                <p>
-                    Fundada em 2018, a STM atua nos setores
-                    industrial, portuário e civil oferecendo
-                    soluções completas em fabricação,
-                    montagem e manutenção.
-                </p>
-
-                <p>
-                    Especializada em caldeiraria,
-                    dutos industriais, ventilação,
-                    exaustão, estruturas metálicas
-                    e manutenção industrial.
-                </p>
-
-                <p>
-                    Trabalhamos com foco em qualidade,
-                    segurança, eficiência e excelência operacional.
-                </p>
+                <img src="caldeiraria.jpeg">
+                <img src="cavalete1.jpeg">
+                <img src="duto1.jpeg">
+                <img src="duto2.jpeg">
+                <img src="roldana1.jpeg">
+                <img src="suporte-bandeja-protecao.jpeg">
 
             </div>
-
-            <div class="sobre-slider">
-
-                <div class="slides">
-
-                    <img src="caldeiraria.jpeg" alt="Caldeiraria">
-
-                    <img src="cavalete1.jpeg" alt="Cavalete">
-
-                    <img src="duto1.jpeg" alt="Duto Industrial">
-
-                    <img src="duto2.jpeg" alt="Duto Industrial">
-
-                    <img src="roldana1.jpeg" alt="Roldana">
-
-                    <img src="suporte-bandeja-protecao.jpeg" alt="Suporte">
-
-                </div>
-
-            </div>
-
         </div>
 
-    </section>
+    </div>
 
-    <div class="divisoria"></div>
+</section>
 
-    <!-- SERVIÇOS -->
+<div class="divisoria"></div>
 
-    <section class="servicos">
+<section class="slider-section">
+    <h2>Dutos Industriais</h2>
 
-        <h2>Nossos Serviços</h2>
+    <div class="slider">
+        <img src="duto1.jpeg">
+        <img src="duto2.jpeg">
+    </div>
+</section>
 
-        <div class="grid">
+<div class="divisoria"></div>
 
-            <div class="card">
-                <h3>Caldeiraria</h3>
-                <p>
-                    Fabricação e montagem
-                    de estruturas metálicas.
-                </p>
-            </div>
+<section class="contato">
 
-            <div class="card">
-                <h3>Dutos Industriais</h3>
-                <p>
-                    Sistemas de ventilação,
-                    exaustão e condução.
-                </p>
-            </div>
+    <h2>Contato</h2>
 
-            <div class="card">
-                <h3>Estruturas Metálicas</h3>
-                <p>
-                    Projetos industriais,
-                    civis e portuários.
-                </p>
-            </div>
+    <a class="btn" href="mailto:stmmanut@gmail.com">E-mail</a>
+    <a class="btn" href="https://wa.me/5513974115419">WhatsApp</a>
 
-            <div class="card">
-                <h3>Manutenção Industrial</h3>
-                <p>
-                    Serviços preventivos
-                    e corretivos industriais.
-                </p>
-            </div>
+    <p>📍 Santos - SP</p>
 
-        </div>
+</section>
 
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- CALDEIRARIA -->
-
-    <section class="hero-projeto">
-
-        <div class="texto-projeto">
-
-            <h2>
-                Fabricação e Montagem
-                de Caldeiraria Industrial
-            </h2>
-
-        </div>
-
-        <img src="caldeiraria.jpeg" alt="Caldeiraria">
-
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- CAVALETES -->
-
-    <section class="slider-section">
-
-        <h2>Cavaletes Articulados</h2>
-
-        <div class="slider">
-
-            <img src="cavalete1.jpeg">
-            <img src="cavalete2.jpeg">
-            <img src="cavalete3.jpeg">
-            <img src="cavalete4.jpeg">
-            <img src="cavalete5.jpeg">
-            <img src="cavalete6.jpeg">
-
-        </div>
-
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- DUTOS -->
-
-    <section class="slider-section">
-
-        <h2>Dutos Industriais</h2>
-
-        <div class="slider">
-
-            <img src="duto1.jpeg" alt="Duto Industrial 1">
-
-            <img src="duto2.jpeg" alt="Duto Industrial 2">
-
-        </div>
-
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- ROLDANAS -->
-
-    <section class="slider-section">
-
-        <h2>Sistemas de Roldanas</h2>
-
-        <div class="slider">
-
-            <img src="roldana1.jpeg">
-
-            <img src="roldana2.jpeg">
-
-        </div>
-
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- SUPORTE -->
-
-    <section class="hero-projeto">
-
-        <div class="texto-projeto">
-
-            <h2>
-                Suporte para Bandeja de Proteção
-            </h2>
-
-        </div>
-
-        <img src="suporte-bandeja-protecao.jpeg">
-
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- SEGURANÇA -->
-
-    <section class="seguranca">
-
-        <h2>Segurança do Trabalho</h2>
-
-        <img src="seguranca.jpeg">
-
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- CONTATO -->
-
-    <section class="contato">
-
-        <h2>Contato</h2>
-
-        <a class="btn"
-           href="mailto:stmmanut@gmail.com">
-           📧 Solicitar por E-mail
-        </a>
-
-        <a class="btn"
-           href="https://wa.me/5513974115419"
-           target="_blank">
-           📱 WhatsApp
-        </a>
-
-        <a class="btn"
-           href="https://instagram.com/stm_fabr.m"
-           target="_blank">
-           📸 Instagram
-        </a>
-
-        <p>📞 (13) 97411-5419</p>
-
-        <p>🏢 CNPJ: 31.635.319/0001-17</p>
-
-        <p>📍 Santos - SP</p>
-
-    </section>
-
-    <div class="divisoria"></div>
-
-    <!-- RESPONSÁVEL -->
-
-    <section class="responsavel">
-
-        <h2>Responsável Técnico</h2>
-
-        <div class="responsavel-box">
-
-            <p>
-                <strong>Engenheiro Civil:</strong>
-                Ramon Douglas da Silva
-            </p>
-
-            <p>
-                <strong>CREA:</strong>
-                5017174271
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            © 2026 STM Manutenção e Montagens
-            - Todos os direitos reservados.
-        </p>
-
-    </footer>
+<footer>
+    © 2026 STM Manutenção e Montagens
+</footer>
 
 </body>
-
 </html>
