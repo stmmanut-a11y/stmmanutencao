@@ -335,6 +335,13 @@ footer{
     height:100vh;
     object-fit:contain;
     background:black;
+
+        .caldeiraria-destaque{
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 }
 
 }
